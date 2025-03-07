@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -16,7 +17,16 @@
 #define ADJUST 3
 
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
+
+// If needed, adjust the value of ZMK_MOUSE_DEFAULT_SCRL_VAL, must be done before including mouse.h
+// ref: https://github.com/zmkfirmware/zmk/issues/72#issuecomment-2081690485
+// and: https://github.com/zmkfirmware/zmk/pull/2027#issuecomment-2130938216
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 600 // default is 10
+
+// NOTE: Adding or removing mouse support requires updating the HID Descriptor.
+// You will need to re-pair to your devices.
+// https://zmk.dev/docs/features/bluetooth#refreshing-the-hid-descriptor
+#include <dt-bindings/zmk/pointing.h>
 
 / {
 
