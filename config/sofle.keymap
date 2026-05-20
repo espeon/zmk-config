@@ -16,7 +16,7 @@
 #define RAISE 2
 #define ADJUST 3
 
-
+#define ENCODER_RESOLUTIONS_RIGHT { 2 }
 
 // If needed, adjust the value of ZMK_MOUSE_DEFAULT_SCRL_VAL, must be done before including mouse.h
 // ref: https://github.com/zmkfirmware/zmk/issues/72#issuecomment-2081690485

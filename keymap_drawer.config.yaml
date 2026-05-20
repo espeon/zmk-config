@@ -1,0 +1,4 @@
+draw_config:
+  key_h: 56
+  key_w: 56
+  separate_combo_diagrams: true
